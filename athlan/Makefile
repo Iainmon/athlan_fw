@@ -1,12 +1,12 @@
-PROJECT = awesomesauce
+PROJECT = athlan
 BUILD_DIR = bin
 
-SHARED_DIR = ../my-common-code
-CFILES = my-project.c
-CFILES += api.c
+SHARED_DIR = ../common
+CFILES = athlan.c
+CFILES += usart.c
+# AFILES += api-asm.S
 
-# TODO - you will need to edit these two lines!
-DEVICE=stm32f407vgt6
+DEVICE=stm32mp157cac3
 OOCD_FILE = board/stm32f4discovery.cfg
 
 # You shouldn't have to edit anything below here.
