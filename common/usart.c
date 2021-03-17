@@ -88,3 +88,14 @@ void usart3_setup(void)
 
     usart3_cfg.usart = setup_cfg.usart_base;
 }
+
+void usart_put_str(char *str, uint8_t n) {
+    uint8_t i;
+    i = 0;
+    while (i < n) {
+        usart_send_blocking(USART3, str[i]);
+        ++i;
+    }
+    usart_send_blocking(USART3, '\r');
+    usart_send_blocking(USART3, '\n');
+}
